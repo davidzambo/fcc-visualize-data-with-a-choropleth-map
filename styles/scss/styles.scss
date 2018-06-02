@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911');
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h1, p{
+  text-align: center;
+  margin-bottom: 0;
+}
+
+p{
+  margin-top: 0.125rem;
+}
+
+.container{
+  font-family: 'Goudy Bookletter 1911', serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  position: relative;
+  min-height: 100vh ;
+}
+
+.states {
+  fill: none;
+  stroke: black;
+  stroke-width: 1px;
+}
+
+.county {
+  stroke: black;
+  stroke-width: 0.25px;
+  &:hover {
+    fill: pink;
+    cursor: pointer;
+  }
+}
+
+.county-borders {
+  fill: red;
+  stroke: #fff;
+  stroke-width: 0.5px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  pointer-events: none;
+}
+
+#tooltip {
+  position: absolute;
+  display: none;
+  visibility: hidden;
+  background-color: lightgoldenrodyellow;
+  border: 1px solid #333;
+  box-shadow: 2px 2px 4px #888;
+  p {
+    margin: 0;
+    padding: 0.125rem 0.25rem;
+    font-size: 12px;
+  }
+}
+
+footer{
+  background-color: black;
+  padding: 0.5rem 0;
+  width: 100%;
+  text-align: center;
+  * {
+    vertical-align: middle;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  img {
+    height: 1.2rem;
+    width: auto;
+  }
+}
+
+// CSS LOADER
+.lds-facebook {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 6px;
+  width: 13px;
+  background: #fcf;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.lds-facebook div:nth-child(1) {
+  left: 6px;
+  animation-delay: -0.24s;
+}
+.lds-facebook div:nth-child(2) {
+  left: 26px;
+  animation-delay: -0.12s;
+}
+.lds-facebook div:nth-child(3) {
+  left: 45px;
+  animation-delay: 0;
+}
+@keyframes lds-facebook {
+  0% {
+    top: 6px;
+    height: 51px;
+  }
+  50%, 100% {
+    top: 19px;
+    height: 26px;
+  }
+}
