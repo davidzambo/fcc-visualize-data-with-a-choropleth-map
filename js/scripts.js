@@ -125,4 +125,16 @@ function render(err, us, education ){
         .append('footer')
         .html('<a href="https://www.dcmf.hu" target="_blank"><span>codedBy</span><img src="https://www.dcmf.hu/images/dcmf-letters.png" alt="dcmf-logo" /></a>');
 
+    const fader = setInterval(function() {
+        const loader = document.querySelector('.loader');
+        if (!loader.style.opacity){
+            loader.style.opacity = 1;
+        }
+        if (loader.style.opacity > 0){
+            loader.style.opacity -= 0.01 ;
+        } else {
+            clearInterval(fader);
+            loader.style.display = 'none';
+        }
+    }, 10);
 };
